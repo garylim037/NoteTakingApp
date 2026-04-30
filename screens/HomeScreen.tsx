@@ -3,11 +3,11 @@
 import React, { useState, useCallback } from 'react';
 import {
   View, Text, StyleSheet, FlatList,
-  TouchableOpacity, TextInput, ActivityIndicator,
-} from 'react-native';
+  TouchableOpacity, TextInput, ActivityIndicator, Alert} from 'react-native';
 import { useFocusEffect } from '@react-navigation/native';
 import NoteCard from '../components/NoteCard';
 import { getAllNotes, seedNotesIfEmpty, Note } from '../storage/noteStorage';
+import { CloudApi } from '../storage/CloudApi';
 
 const categories = ['All', 'Study', 'Personal', 'Ideas'];
 
@@ -35,6 +35,17 @@ export default function HomeScreen({ navigation }: any) {
     const matchesCategory = selectedCategory === 'All' || note.category === selectedCategory;
     return matchesSearch && matchesCategory;
   });
+
+  const handleCloudSync = async () => {
+    Alert.alert('Syncing', 'Sending notes to the cloud...');
+    const success = await CloudApi.syncToCloud();
+    
+    if (success) {
+      Alert.alert('Success', 'All notes backed up to the cloud! (CO4 Completed)');
+    } else {
+      Alert.alert('Error', 'Failed to sync. Is your Laravel server & ngrok running?');
+    }
+  };
 
   return (
     <View style={styles.container}>
@@ -83,6 +94,13 @@ export default function HomeScreen({ navigation }: any) {
 
       <TouchableOpacity style={styles.addButton} onPress={() => navigation.navigate('AddNote')}>
         <Text style={styles.addButtonText}>+ ADD NEW NOTE</Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity 
+        style={[styles.addButton, { backgroundColor: '#43a047' }]}
+        onPress={handleCloudSync}
+      >
+        <Text style={styles.addButtonText}>BACKUP TO CLOUD</Text>
       </TouchableOpacity>
     </View>
   );

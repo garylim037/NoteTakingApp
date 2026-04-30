@@ -20,7 +20,7 @@ function HomeStack() {
       <Stack.Screen name="HomeMain" component={HomeScreen} options={{ headerShown: false }} />
       <Stack.Screen name="AddNote" component={AddNoteScreen} options={{ title: 'Add Note' }} />
       <Stack.Screen name="NoteDetails" component={NoteDetailsScreen} options={{ title: 'Note Details' }} />
-      <Stack.Screen name="EditNote" component={EditNoteScreen} options={{ title: 'Edit Note' }} />  {/* ← NEW */}
+      <Stack.Screen name="EditNote" component={EditNoteScreen} options={{ title: 'Edit Note' }} />
     </Stack.Navigator>
   );
 }
