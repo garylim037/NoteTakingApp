@@ -41,7 +41,7 @@ export default function HomeScreen({ navigation }: any) {
     const success = await CloudApi.syncToCloud();
     
     if (success) {
-      Alert.alert('Success', 'All notes backed up to the cloud! (CO4 Completed)');
+      Alert.alert('Success', 'All notes backed up to the cloud!');
     } else {
       Alert.alert('Error', 'Failed to sync. Is your Laravel server & ngrok running?');
     }
