@@ -30,13 +30,11 @@ function TabNavigator() {
         headerShown: false,
         tabBarIcon: ({ focused, color, size }) => {
           let iconName = '';
-
-         if (route.name === 'NotesTab') {
-          iconName = focused ? 'document-text' : 'document-text-outline';
-        } else if (route.name === 'AboutTab') {
-          iconName = focused ? 'person' : 'person-outline';
-        }
-
+          if (route.name === 'NotesTab') {
+            iconName = focused ? 'document-text' : 'document-text-outline';
+          } else if (route.name === 'AboutTab') {
+            iconName = focused ? 'person' : 'person-outline';
+          }
           return <Ionicons name={iconName} size={size} color={color} />;
         },
         tabBarActiveTintColor: '#2196F3',
