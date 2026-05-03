@@ -9,7 +9,7 @@ import HomeScreen from '../screens/HomeScreen';
 import AddNoteScreen from '../screens/AddNoteScreen';
 import NoteDetailsScreen from '../screens/NoteDetailsScreen';
 import EditNoteScreen from '../screens/EditNoteScreen';
-import ProfileScreen from '../screens/ProfileScreen';
+import AboutScreen from '../screens/AboutScreen';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -46,7 +46,7 @@ function TabNavigator() {
       })}
     >
       <Tab.Screen name="NotesTab" component={HomeStack} options={{ title: 'Notes' }} />
-      <Tab.Screen name="ProfileTab" component={ProfileScreen} options={{ title: 'Profile' }} />
+      <Tab.Screen name="ProfileTab" component={AboutScreen} options={{ title: 'Profile' }} />
     </Tab.Navigator>
   );
 }
