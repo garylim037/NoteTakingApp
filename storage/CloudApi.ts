@@ -1,7 +1,6 @@
 import { getAllNotes, Note } from './noteStorage';
 
-const API_BASE_URL = 'https://notetaking-backend.onrender.com/api'; 
-
+const API_BASE_URL = 'https://notetakingapp-t297.onrender.com/api';
 // ─── Shared fetch helper ────────────────────────────────────────────────────
 async function apiFetch(path: string, options?: RequestInit) {
   const response = await fetch(`${API_BASE_URL}${path}`, {
