@@ -35,7 +35,7 @@ function TabNavigator() {
 
           if (route.name === 'NotesTab') {
             iconName = focused ? 'document-text' : 'document-text-outline';
-          } else if (route.name === 'ProfileTab') {
+          } else if (route.name === 'AboutTab') {
             iconName = focused ? 'person' : 'person-outline';
           }
 
@@ -46,7 +46,7 @@ function TabNavigator() {
       })}
     >
       <Tab.Screen name="NotesTab" component={HomeStack} options={{ title: 'Notes' }} />
-      <Tab.Screen name="ProfileTab" component={AboutScreen} options={{ title: 'Profile' }} />
+      <Tab.Screen name="AboutTab" component={AboutScreen} options={{ title: 'About' }} />
     </Tab.Navigator>
   );
 }
