@@ -1,5 +1,3 @@
-// navigation/MainNavigator.tsx  ← REPLACE ENTIRE FILE
-
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -8,7 +6,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import HomeScreen from '../screens/HomeScreen';
 import AddNoteScreen from '../screens/AddNoteScreen';
 import NoteDetailsScreen from '../screens/NoteDetailsScreen';
-import EditNoteScreen from '../screens/EditNoteScreen';      // ← NEW
+import EditNoteScreen from '../screens/EditNoteScreen';     
 import AboutScreen from '../screens/AboutScreen';
 
 const Stack = createNativeStackNavigator();
