@@ -1,11 +1,11 @@
 import React from 'react';
 import { View, Text, StyleSheet, ScrollView } from 'react-native';
 
-export default function ProfileScreen() {
+export default function AboutScreen() {
   return (
     <ScrollView style={styles.container}>
       <Text style={styles.title}>Note Taking App</Text>
-      <Text style={styles.subtitle}>Wireless Application Development - CO2</Text>
+      <Text style={styles.subtitle}>An app design to keep track of notes easier</Text>
 
       <View style={styles.card}>
         <Text style={styles.sectionTitle}>App Description</Text>
@@ -15,7 +15,7 @@ export default function ProfileScreen() {
       </View>
 
       <View style={styles.card}>
-        <Text style={styles.sectionTitle}>CO2 Features</Text>
+        <Text style={styles.sectionTitle}>Features</Text>
         <Text style={styles.text}>• User-friendly screens and layouts</Text>
         <Text style={styles.text}>• Reusable custom components</Text>
         <Text style={styles.text}>• Stack navigation</Text>
@@ -28,7 +28,7 @@ export default function ProfileScreen() {
         <Text style={styles.text}>• Home Screen</Text>
         <Text style={styles.text}>• Add Note Screen</Text>
         <Text style={styles.text}>• Note Details Screen</Text>
-        <Text style={styles.text}>• Profile Screen</Text>
+        <Text style={styles.text}>• About Screen</Text>
       </View>
 
       <View style={styles.card}>
