@@ -35,6 +35,7 @@ export const CloudApi = {
       console.error('Cloud Sync Failed:', error);
       return false;
     }
+<<<<<<< Updated upstream
   },
 
   // READ - Fetch all notes from the cloud
@@ -98,4 +99,7 @@ export const CloudApi = {
       return false;
     }
   },
+=======
+  }
+>>>>>>> Stashed changes
 };

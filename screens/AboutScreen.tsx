@@ -5,7 +5,7 @@ export default function AboutScreen() {
   return (
     <ScrollView style={styles.container}>
       <Text style={styles.title}>Note Taking App</Text>
-      <Text style={styles.subtitle}>An app that make taking notes easier to manage</Text>
+      <Text style={styles.subtitle}>An app design to keep track of notes easier</Text>
 
       <View style={styles.card}>
         <Text style={styles.sectionTitle}>App Description</Text>
@@ -76,3 +76,4 @@ const styles = StyleSheet.create({
     lineHeight: 23,
   },
 });
+
