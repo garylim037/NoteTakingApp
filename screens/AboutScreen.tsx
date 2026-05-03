@@ -34,7 +34,7 @@ export default function AboutScreen() {
       <View style={styles.card}>
         <Text style={styles.sectionTitle}>Navigation Used</Text>
         <Text style={styles.text}>
-          Stack Navigator is used for moving between Home, Add Note, and Note Details screens. Bottom Tab Navigator is used to switch between Notes and Profile sections.
+          Stack Navigator is used for moving between Home, Add Note, and Note Details screens. Bottom Tab Navigator is used to switch between Notes and About sections.
         </Text>
       </View>
     </ScrollView>
